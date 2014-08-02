@@ -1,0 +1,15 @@
+h1. Leduc Country Lights
+
+h3. Development Setup
+
+After checking on the repository just run the following two commands and answer the prompts.
+
+<pre><code class='bash'>bundle install
+bundle exec thor setup</code></pre>
+
+I like to run guard while I develop to trigger the correct tests to run and browser reloads while
+working on front end design and JavaScript.
+
+<pre<code class='bash'>bundle exec guard</code></pre>
+
+h3. Contributing

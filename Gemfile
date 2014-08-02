@@ -8,6 +8,9 @@ gem 'mysql2'
 gem 'sass-rails', '~> 4.0.3'
 
 group :development do
+  gem 'guard-rails',   require: false
+  gem 'guard-rspec',   require: false
+  gem 'guard-rubocop', require: false
   gem 'spring'
 end
 

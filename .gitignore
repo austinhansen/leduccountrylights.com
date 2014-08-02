@@ -19,3 +19,6 @@
 # I will take it out of the normal development flow but figure out a way to keep the server
 # environments as stable as possible.
 Gemfile.lock
+
+# Don't pass around any database connection information. Nobodies is ever the same.
+config/database.yml

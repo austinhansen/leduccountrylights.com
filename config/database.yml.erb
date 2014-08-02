@@ -1,0 +1,16 @@
+# Encoding: utf-8
+default: &default
+  adapter:  mysql2
+  database: leduccountrylights
+  encoding: utf8
+  pool:     5
+  username: <%= @database_username %>
+  password: <%= @database_password %>
+  socket: /var/run/mysqld/mysqld.sock
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+  database: leduccountrylights_test
