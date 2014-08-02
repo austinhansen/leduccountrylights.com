@@ -1,2 +1,6 @@
+AllCops:
+  Exclude:
+    - 'bin/*'
+
 LineLength:
   Max: 100
