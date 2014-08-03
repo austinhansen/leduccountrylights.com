@@ -8,27 +8,27 @@ feature 'Homepage' do
   end
 
   scenario 'Should have a schedule of dates' do
-    expect(page).to have_text('TODO: Schedule')
+    expect(page).to have_selector('#schedule')
   end
 
   scenario 'Should have information about donations' do
-    expect(page).to have_text('TODO: Donation Information')
+    expect(page).to have_selector('#schedule')
   end
 
   scenario 'Should have the directions' do
-    expect(page).to have_text('Range Road 492')
+    expect(page).to have_selector('#directions')
   end
 
   scenario 'Should have a google map' do
-    expect(page).to have_text('TODO: Google Maps JavaScript')
+    expect(page).to have_selector('#directions .map')
   end
 
   scenario 'Should have a image gallery' do
-    expect(page).to have_text('TODO: Image Gallery')
+    expect(page).to have_selector('#photos')
   end
 
   scenario 'Should have information on volunteers' do
-    expect(page).to have_text('TODO: Volunteer information')
+    expect(page).to have_selector('#volunteers')
   end
 
 end

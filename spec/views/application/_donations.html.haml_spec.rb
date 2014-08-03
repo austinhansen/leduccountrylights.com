@@ -12,5 +12,3 @@ describe 'application/_donations.html.haml' do
   end
 
 end
-
-

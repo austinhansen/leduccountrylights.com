@@ -20,4 +20,3 @@ describe 'application/_schedule.html.haml' do
   end
 
 end
-

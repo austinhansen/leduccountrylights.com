@@ -16,5 +16,3 @@ describe 'application/_volunteers.html.haml' do
   end
 
 end
-
-

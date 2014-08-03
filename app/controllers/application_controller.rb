@@ -1,3 +1,5 @@
+# Encoding: utf-8
+#
 # 99% of your controllers in your application should have this controller in its inheritance chain.
 # So do things here like enforce security by default, always check for authroization and those
 # types of things.
