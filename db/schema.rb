@@ -11,6 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20140804174404) do
+
+  create_table "snippets", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "slug",        limit: 32
+    t.string   "description", limit: 64
+    t.text     "content"
+  end
+
+  add_index "snippets", ["slug"], name: "index_snippets_on_slug", unique: true, using: :btree
 
 end

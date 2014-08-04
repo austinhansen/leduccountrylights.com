@@ -5,5 +5,4 @@
       .counter-item 00
       .counter-item 00
       .counter-item 00
-  %h1 Christmas Time
-  %h3 Christmas Lights Are Really Pretty!
+  = Snippet.find_by_slug!('countdown').to_html.html_safe

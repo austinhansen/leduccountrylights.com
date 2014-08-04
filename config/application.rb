@@ -14,7 +14,9 @@ require 'sprockets/railtie'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+# A website for Leduc Country Lights
 module LeduccountrylightsCom
+  # Rubocop: disable Documentation
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -27,5 +29,12 @@ module LeduccountrylightsCom
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+
+    config.generators do |g|
+      g.fixture_replacement :factory_girl, dir: 'spec/factories'
+      g.orm                 :active_record
+      g.template_engine     :haml
+      g.test_framework      :rspec, fixture: true, views: false
+    end
   end
 end

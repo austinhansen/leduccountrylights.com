@@ -1,0 +1,5 @@
+%h1 Edit Snippet
+= simple_form_for resource, url: admin_snippet_path(resource) do |form|
+  = form.input :description
+  = form.input :content, input_html: { col: 80, row: 10 }
+  = form.submit

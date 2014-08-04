@@ -9,6 +9,8 @@ gem 'haml'
 gem 'jquery-rails'
 gem 'mysql2'
 gem 'sass-rails', '~> 4.0.3'
+gem 'RedCloth'
+gem 'simple_form'
 
 group :development do
   gem 'better_errors'
@@ -23,6 +25,8 @@ end
 group :test do
   gem 'capybara',    require: false
   gem 'rspec-rails', require: false
+  gem 'factory_girl_rails', require: false
+  gem 'shoulda-matchers',   require: false
 end
 
 gem 'pry', group: [:development, :test]
