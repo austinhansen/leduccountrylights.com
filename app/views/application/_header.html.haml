@@ -1,0 +1,12 @@
+%header
+  %nav.navbar.navbar{ role: :navigation }
+    .container-fluid
+      .navbar-header
+        = link_to 'Leduc Country Lights', root_url, class: 'navbar-brand'
+      .navbar-collapse
+        %ul.nav.navbar-nav.navbar-right
+          %li= link_to 'Schedule',   root_url(anchor: :schedule)
+          %li= link_to 'Dontations', root_url(anchor: :donations)
+          %li= link_to 'Directions', root_url(anchor: :directions)
+          %li= link_to 'Photos',     root_url(anchor: :directions)
+          %li= link_to 'Volunteer',  root_url(anchor: :volunteer)
