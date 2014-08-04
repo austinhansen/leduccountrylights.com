@@ -4,7 +4,7 @@
 # getting started with page rendering to replace the default Rails root
 # page and start stubbing out an other pages for design purposes.
 class StaticPagesController < ApplicationController
-
+  skip_before_action :authenticate!, only: :index
   # The homepage
   def index
   end
