@@ -13,3 +13,5 @@ working on front end design and JavaScript.
 <pre<code class='bash'>bundle exec guard</code></pre>
 
 h3. Contributing
+
+Fork the repository and send in a pull request!
