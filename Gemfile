@@ -23,6 +23,8 @@ end
 group :test do
   gem 'capybara',    require: false
   gem 'rspec-rails', require: false
+  gem 'factory_girl_rails', require: false
+  gem 'shoulda-matchers',   require: false
 end
 
 gem 'pry', group: [:development, :test]
