@@ -19,20 +19,14 @@ class Default < Thor
   end
 
   def configure_database
-    database_username = ENV['LOCAL_DATABASE_USERNAME'] || ask('Database username?', default: 'root')
-    database_password = ENV['LOCAL_DATABASE_PASSWORD'] || ask('Database password?', default: '')
-    template 'config/database.yml.erb', 'config/database.yml', {
-      database_username: database_username,
-      database_password: database_password
-    }
+    @database_username = ENV['LOCAL_DATABASE_USERNAME'] || ask('Database username?', default: 'root')
+    @database_password = ENV['LOCAL_DATABASE_PASSWORD'] || ask('Database password?', default: '')
+    template 'config/database.yml.erb', 'config/database.yml'
   end
 
   def configure_application
-    application_username = ENV['COUNTRY_LIGHTS_USERNAME'] || ask('Admin username?', default: 'foo')
-    application_password = ENV['COUNTRY_LIGHTS_PASSWORD'] || ask('Admin password?', default: 'bar')
-    template 'config/application.yml.erb', 'config/application.yml', {
-      application_username: application_username,
-      application_password: application_password
-    }
+    @application_username = ENV['COUNTRY_LIGHTS_USERNAME'] || ask('Admin username?', default: 'foo')
+    @application_password = ENV['COUNTRY_LIGHTS_PASSWORD'] || ask('Admin password?', default: 'bar')
+    template 'config/application.yml.erb', 'config/application.yml'
   end
 end
