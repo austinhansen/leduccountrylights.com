@@ -8,6 +8,7 @@ class Default < Thor
   desc 'setup', 'Setup all the requirements that are needed for local development.'
   def setup
     configure_database
+    configure_application
     bootstrap
   end
 
@@ -26,4 +27,12 @@ class Default < Thor
     }
   end
 
+  def configure_application
+    application_username = ENV['COUNTRY_LIGHTS_USERNAME'] || ask('Admin username?', default: 'foo')
+    application_password = ENV['COUNTRY_LIGHTS_PASSWORD'] || ask('Admin password?', default: 'bar')
+    template 'config/application.yml.erb', 'config/application.yml', {
+      application_username: application_username,
+      application_password: application_password
+    }
+  end
 end

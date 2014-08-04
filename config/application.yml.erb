@@ -1,0 +1,10 @@
+# Encoding: utf-8
+default: &default
+  username: <%= @application_username %>
+  password: <%= @application_password %>
+
+development:
+  <<: *default
+
+test:
+  <<: *default
