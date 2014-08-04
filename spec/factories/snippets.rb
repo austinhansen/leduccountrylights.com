@@ -9,6 +9,5 @@ FactoryGirl.define do
     slug
     content 'text'
     description 'text'
-    html_cache 'text'
   end
 end

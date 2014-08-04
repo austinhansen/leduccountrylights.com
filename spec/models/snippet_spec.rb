@@ -8,7 +8,7 @@ describe Snippet, type: :model do
     it { should validate_presence_of(:slug) }
     it { should validate_presence_of(:description) }
     it { should validate_presence_of(:content) }
-    it { should validate_presence_of(:html_cache) }
+    # it { should validate_presence_of(:html_cache) }
   end
 
   context 'database' do
@@ -20,6 +20,19 @@ describe Snippet, type: :model do
       snippet = build :snippet
       expect(snippet).to be_valid
       snippet.save!
+    end
+  end
+
+  context '#to_html' do
+    it 'should return the content of the snippet' do
+      snippet = build :snippet, content: 'test test'
+      expect(snippet.to_html).to match('test test')
+    end
+
+    it 'should parse textile and convert it to html' do
+      snippet = build :snippet, content: "h1. Christmas is coming!\n\nh3. Christmas lights are pretty"
+      expect(snippet.to_html)
+        .to eq("<h1>Christmas is coming!</h1>\n<h3>Christmas lights are pretty</h3>")
     end
   end
 end

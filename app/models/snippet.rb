@@ -12,7 +12,12 @@ class Snippet < ActiveRecord::Base
   validates :content, {
     presence: true
   }
-  validates :html_cache, {
-    presence: true
-  }
+  # validates :html_cache, {
+  #   presence: true
+  # }
+
+  # Returns the snippet content as HTML
+  def to_html
+    RedCloth.new(content).to_html
+  end
 end

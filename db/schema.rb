@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 20140804174404) do
     t.string   "slug",        limit: 32
     t.string   "description", limit: 64
     t.text     "content"
-    t.text     "html_cache"
   end
 
   add_index "snippets", ["slug"], name: "index_snippets_on_slug", unique: true, using: :btree
