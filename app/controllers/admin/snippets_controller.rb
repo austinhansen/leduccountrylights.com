@@ -1,3 +1,4 @@
+# Controller for editing snippets in the admin interface
 class Admin::SnippetsController < Admin::BaseController
   helper_method :collection, :resource
 

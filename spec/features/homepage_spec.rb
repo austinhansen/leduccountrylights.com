@@ -4,6 +4,7 @@ require 'rails_helper'
 feature 'Homepage' do
 
   before do
+    create(:snippet, slug: 'countdown')
     visit root_url
   end
 

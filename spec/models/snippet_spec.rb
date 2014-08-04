@@ -30,7 +30,8 @@ describe Snippet, type: :model do
     end
 
     it 'should parse textile and convert it to html' do
-      snippet = build :snippet, content: "h1. Christmas is coming!\n\nh3. Christmas lights are pretty"
+      snippet = build :snippet,
+        content: "h1. Christmas is coming!\n\nh3. Christmas lights are pretty"
       expect(snippet.to_html)
         .to eq("<h1>Christmas is coming!</h1>\n<h3>Christmas lights are pretty</h3>")
     end
