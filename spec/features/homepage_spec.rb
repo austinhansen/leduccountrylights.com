@@ -7,6 +7,7 @@ feature 'Homepage' do
     create(:snippet, slug: 'countdown')
     create(:snippet, slug: 'gallery')
     create(:snippet, slug: 'donations')
+    create(:snippet, slug: 'volunteers')
     visit root_url
   end
 

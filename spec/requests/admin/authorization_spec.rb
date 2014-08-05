@@ -5,6 +5,7 @@ describe 'http auth' do
     create(:snippet, slug: 'countdown')
     create(:snippet, slug: 'gallery')
     create(:snippet, slug: 'donations')
+    create(:snippet, slug: 'volunteers')
   end
 
   it 'should authorize the admin area' do

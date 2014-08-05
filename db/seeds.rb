@@ -18,3 +18,11 @@ snippet.update_attributes!(
   slug: 'donations',
   description: 'Donations'
 )
+
+snippet = Snippet.find_or_initialize_by(slug: 'volunteers')
+snippet.update_attributes!(
+  content: "They would like volunteers (traffic control, hot chocolate servers),
+    those interested please phone Doug Ruel\n\n780-777-4122",
+  slug: 'volunteers',
+  description: 'Volunteers'
+)

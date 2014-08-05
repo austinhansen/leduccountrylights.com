@@ -4,6 +4,11 @@ require 'rails_helper'
 describe 'application/_volunteers.html.haml' do
 
   before do
+    create(:snippet,
+      slug: 'volunteers',
+      content: "They would like volunteers (traffic control, hot chocolate servers),
+        those interested please phone Doug Ruel\n\n780-777-4122"
+    )
     render
   end
 
