@@ -4,3 +4,10 @@ snippet.update_attributes!(
   slug: 'countdown',
   description: 'Christmas countdown text'
 )
+
+snippet = Snippet.find_or_initialize_by(slug: 'gallery')
+snippet.update_attributes!(
+  content: "h2. Gallery\n\nh4. There is something for everyone",
+  slug: 'gallery',
+  description: 'Image gallery'
+)

@@ -5,6 +5,7 @@ feature 'Homepage' do
 
   before do
     create(:snippet, slug: 'countdown')
+    create(:snippet, slug: 'gallery')
     visit root_url
   end
 

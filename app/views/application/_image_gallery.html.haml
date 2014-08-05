@@ -1,6 +1,5 @@
 #photos
-  %h2 Gallery
-  %h4 There is something for everyone
+  = Snippet.find_by_slug!('gallery').to_html.html_safe
 
   %ul
     %li= image_tag 'http://lorempixel.com/400/400/'
