@@ -11,3 +11,10 @@ snippet.update_attributes!(
   slug: 'gallery',
   description: 'Image gallery'
 )
+
+snippet = Snippet.find_or_initialize_by(slug: 'donations')
+snippet.update_attributes!(
+  content: 'Donations of food & cash accepted for the Leduc Food Bank',
+  slug: 'donations',
+  description: 'Donations'
+)
